@@ -33,12 +33,6 @@ Where:
 
 ---
 
-## 📷 Screenshots
-
-*(Include screenshots here if available)*
-
----
-
 ⚠️ Disclaimer
 
 This tool provides approximate estimates based on standard formulas.
