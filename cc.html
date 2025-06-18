@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Deficit Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-text">Calorie Deficit Calculator</div>
+  </div>
+  <div class="main-flex">
+    <div class="container">
+      <h1>Calorie Deficit Calculator</h1>
+
+      <label for="weight">Current Weight (kg):</label>
+      <input type="number" id="weight" placeholder="e.g. 70">
+
+      <label for="deficit">Daily Calorie Deficit:</label>
+      <input type="number" id="deficit" value="500">
+
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" placeholder="e.g. 175">
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="e.g. 25">
+
+      <label for="gender">Gender:</label>
+      <select id="gender">
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <button onclick="calculateDeficit()">Calculate</button>
+
+      <div class="result" id="output"></div>
+    </div>
+
+    <div class="converter-box">
+      <h3 style="margin-top: 0;">Height Unit Converter</h3>
+      <label for="feet">Feet:</label>
+      <input type="number" id="feet" placeholder="e.g. 5">
+
+      <label for="inches">Inches:</label>
+      <input type="number" id="inches" placeholder="e.g. 7">
+
+      <button onclick="convertToCm()">Convert to cm</button>
+      <p id="convertedHeight" style="margin-top: 10px;"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <footer style="background-color: #000; color: #fff; padding: 20px; text-align: center; font-size: 14px;">
+    <p><strong>Calorie Deficit Calculator</strong> uses the BMI-based body fat estimation formula:</p>
+    <p>For males: <code>1.20 × BMI + 0.23 × Age - 16.2</code> | For females: <code>1.20 × BMI + 0.23 × Age - 5.4</code></p>
+    <p>Fat mass is calculated as <code>Estimated Body Fat % × Weight</code>, and 1 kg of fat is assumed to equal 7,700 kcal.</p>
+    <p>All calculations are estimates and should not replace professional medical advice.</p>
+    <p style="margin-top: 10px;">&copy; 2025 Calorie Deficit Calculator. All rights reserved.</p>
+  </footer>
+</body>
+</html>
